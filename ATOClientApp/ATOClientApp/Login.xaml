@@ -5,14 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ATOClientApp"
         mc:Ignorable="d"
-        Title="Login" Height="234.666" Width="423.333">
-    <Grid>
+        Title="Login" Height="350" Width="420" ResizeMode="NoResize">
+    <Grid Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
         <Label Content="Username:" HorizontalAlignment="Left" Margin="50,37,0,0" VerticalAlignment="Top"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Height="23" Width="200"/>
         <Label Content="Password:" HorizontalAlignment="Left" Margin="50,87,0,0" VerticalAlignment="Top"/>
-        <PasswordBox HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Height="23" Width="200"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="332,175,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Forgot Username?" HorizontalAlignment="Left" Margin="50,127,0,0" VerticalAlignment="Top" FontSize="10" />
-        <Label Content="Forgot Password?" HorizontalAlignment="Left" Margin="50,147,0,0" VerticalAlignment="Top" FontSize="10" />
+        <PasswordBox x:Name="_password" HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Height="23" Width="200" AutomationProperties.IsRequiredForForm="True" AutomationProperties.Name="_password"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="298,192,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Label Content="Forgot Username?" HorizontalAlignment="Left" Margin="50,127,0,0" VerticalAlignment="Top" FontSize="10" Visibility="Hidden" />
+        <Label Content="Forgot Password?" HorizontalAlignment="Left" Margin="50,189,0,0" VerticalAlignment="Top" FontSize="10" />
+        <TextBox x:Name="_login" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="150,40,0,0" AutomationProperties.IsRequiredForForm="True"/>
+        <Label x:Name="_password_retype_label" Content="Re-type&#xD;&#xA;Password:" HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Visibility="Collapsed" IsEnabled="False"/>
+        <PasswordBox x:Name="_password_retype" HorizontalAlignment="Left" Margin="150,135,0,0" VerticalAlignment="Top" Height="23" Width="200" AutomationProperties.IsRequiredForForm="True" AutomationProperties.Name="_password" Visibility="Collapsed" IsEnabled="False"/>
+        <Label x:Name="_feedback_label" Content="" HorizontalAlignment="Center" Margin="23,247,23,20" VerticalAlignment="Bottom" Width="337"/>
     </Grid>
 </Window>

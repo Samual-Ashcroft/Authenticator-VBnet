@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ATOAdminApp"
         mc:Ignorable="d"
-        Title="ClientInfoForm" Height="468.833" Width="423.333">
+        Title="ClientInfoForm" Height="562.913" Width="423.333">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Label Content="Username:" HorizontalAlignment="Left" Margin="50,37,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="150,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <Label Content="First Name:" HorizontalAlignment="Left" Margin="50,77,0,0" VerticalAlignment="Top"/>
@@ -21,7 +24,12 @@
         <TextBox HorizontalAlignment="Left" Height="69" Margin="150,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <Label Content="Notes:" HorizontalAlignment="Left" Margin="50,323,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="69" Margin="150,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <Button Content="Request Access" HorizontalAlignment="Left" Margin="263,409,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.782"/>
-        <Button Content="Add User" HorizontalAlignment="Left" Margin="353,409,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.782"/>
+        <Button Content="Request Access" HorizontalAlignment="Left" Margin="262,502,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.291,0.782"/>
+        <Button Content="Add User" HorizontalAlignment="Left" Margin="352,502,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,4.85"/>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Re-type&#xD;&#xA;Password" HorizontalAlignment="Left" Margin="50,440,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="50,409,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="150,459,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
