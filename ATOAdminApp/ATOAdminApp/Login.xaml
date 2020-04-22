@@ -1,0 +1,18 @@
+﻿<Window x:Class="Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATOAdminApp"
+        mc:Ignorable="d"
+        Title="Admin Login" Height="234.666" Width="423.333">
+    <Grid>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="50,37,0,0" VerticalAlignment="Top"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="150,40,0,0" VerticalAlignment="Top" Height="23" Width="200"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="50,87,0,0" VerticalAlignment="Top"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Height="23" Width="200"/>
+        <Label Content="Forgot Username?" HorizontalAlignment="Left" Margin="50,127,0,0" VerticalAlignment="Top" FontSize="10" />
+        <Label Content="Forgot Password?" HorizontalAlignment="Left" Margin="50,147,0,0" VerticalAlignment="Top" FontSize="10" />
+        <Button Content="Login" HorizontalAlignment="Left" Margin="332,175,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

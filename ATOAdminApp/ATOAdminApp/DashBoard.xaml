@@ -1,0 +1,25 @@
+﻿<Window x:Class="DashBoard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATOAdminApp"
+        mc:Ignorable="d"
+        Title="Dashbaord" Height="287.666" Width="967.666">
+    <Grid>
+        <Label Content="Create/Edit Form" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Report Form" HorizontalAlignment="Left" Margin="487,7,0,0" VerticalAlignment="Top"/>
+        <Label Content="Search Primary Key:" HorizontalAlignment="Left" Margin="50,37,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="168,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Search" HorizontalAlignment="Left" Margin="373,43,0,0" VerticalAlignment="Top" Width="75"/>
+        <CheckBox HorizontalAlignment="Left" Margin="50,77,0,0" VerticalAlignment="Top" Content="See report form for multiple values?"/>
+        <TextBox HorizontalAlignment="Left" Height="101" Margin="50,121,0,0" TextWrapping="Wrap" Text="Space to put table." VerticalAlignment="Top" Width="398"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="400,227,0,0" VerticalAlignment="Top" Width="75"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="481.833"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="481" Margin="480,0,-0.333,0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="532,43,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="101" Margin="532,79,0,0" TextWrapping="Wrap" Text="Space to put table." VerticalAlignment="Top" Width="398"/>
+        <Label Content="Next" HorizontalAlignment="Left" Margin="895,185,0,0" VerticalAlignment="Top"/>
+        <Label Content="Previous" HorizontalAlignment="Left" Margin="532,185,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
