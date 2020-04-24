@@ -5,7 +5,8 @@ Imports System.Timers
 
 Public Class Login
 
-    Private Sub Button_Click(sender As Object, e As RoutedEventArgs) Handles _login_submit.Click
+    Private Sub Button_Click(sender As Object, e As RoutedEventArgs)
+
 
         If Authenticate(_login, _password, _password_retype, _password_retype_label, _feedback_label, _login_submit) Then
 
@@ -52,6 +53,17 @@ Public Class Login
         'make login available'
         _login_grid.IsEnabled = True
         _login_grid.Visibility = Visibility.Visible
+
+        'Make headers for the datagrid'
+
         Dim sharedtimer As New Timer
+    End Sub
+
+    Private Sub Button_Click_1(sender As Object, e As RoutedEventArgs)
+
+    End Sub
+
+    Private Sub _request_access_Click(sender As Object, e As RoutedEventArgs)
+
     End Sub
 End Class

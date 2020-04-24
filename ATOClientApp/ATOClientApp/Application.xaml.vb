@@ -5,6 +5,43 @@ Module DBinteractions
     Dim connStr As String = "Database=ATO_authenticator;Data Source=localhost;" _
         & "User Id=user_client;Password=45h2g45hg23kjh53j456276DFSJG"
 
+    Private Function RequestAccess(connSTR As String, LOGid As Integer, minLength As Integer, maxLength As Integer) As String
+
+        Dim charRef As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        Dim rando As New Random
+        Dim stringBuilder As String = ""
+
+        Dim count As Integer = rando.Next(minLength, maxLength)
+
+        For i As Integer = 1 To count
+            Dim idx As Integer = rando.Next(0, charRef.Length)
+            stringBuilder = stringBuilder & charRef.Substring(idx, 1)
+        Next
+
+        Dim conn As New MySqlConnection(connSTR)
+        Dim cmd As New MySqlCommand()
+
+        Try
+            conn.Open()
+            cmd.Connection = conn
+
+            cmd.CommandText = "INSERT INTO hashes(LOGid, hash) VALUES(@lOGid, @hash)"
+            cmd.Prepare()
+
+            cmd.Parameters.AddWithValue("@LOGid", LOGid)
+            cmd.Parameters.AddWithValue("@hash", stringBuilder)
+            cmd.ExecuteNonQuery()
+
+        Catch ex As MySqlException
+            Console.WriteLine("Error: " & ex.ToString())
+        Finally
+            conn.Close()
+        End Try
+
+        Return stringBuilder
+
+    End Function
+
     Private Function PopulateAppsPriv(connstr As String, _apps_comboBox As ComboBox) As Boolean
 
         If TestHashPriv(connstr) < 0 Then
@@ -243,10 +280,13 @@ Module DBinteractions
             cmd.Parameters.AddWithValue("@LOGid", LOGid)
             Dim reader1 As MySqlDataReader = cmd.ExecuteReader()
 
+
             'Test if the user exists'
             While reader1.Read()
                 count += 1
             End While
+
+            Console.WriteLine("number of passwords" & CType(count, String))
 
             reader1.Close()
         Catch ex As MySqlException
@@ -271,6 +311,7 @@ Module DBinteractions
         End If
 
         'checking if a password exists'
+        Console.WriteLine("yes" & CType(CheckForPassword(connStr, LOGid), String) & " Yote " & CType(_login.IsEnabled, String))
         If (CheckForPassword(connStr, LOGid) = 0 And _login.IsEnabled) Then
             _feedback_label.Content = "You dont have a password yet, please enter and re-enter your new password in the field that has appeared then hit submit"
             _password_retype_label.Visibility = Visibility.Visible

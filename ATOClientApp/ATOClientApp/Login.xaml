@@ -8,10 +8,6 @@
         Title="Welcome ATO Employee" Height="450" Width="620" ResizeMode="NoResize">
     <Grid>
         <Grid x:Name="_login_grid" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="620" Height="450" IsEnabled="False" Visibility="Collapsed" >
-            <Grid>
-            
-            </Grid>
-
             <Label Content="Username:" HorizontalAlignment="Left" Margin="50,37,0,0" VerticalAlignment="Top"/>
             <Label Content="Password:" HorizontalAlignment="Left" Margin="50,87,0,0" VerticalAlignment="Top"/>
             <PasswordBox x:Name="_password" HorizontalAlignment="Left" Margin="150,90,0,0" VerticalAlignment="Top" Height="23" Width="200" AutomationProperties.IsRequiredForForm="True" AutomationProperties.Name="_password"/>
@@ -22,15 +18,16 @@
             <Label x:Name="_password_retype_label" Content="Re-type&#xD;&#xA;Password:" HorizontalAlignment="Left" Margin="50,125,0,0" VerticalAlignment="Top" Visibility="Collapsed" IsEnabled="False"/>
             <PasswordBox x:Name="_password_retype" HorizontalAlignment="Left" Margin="150,135,0,0" VerticalAlignment="Top" Height="23" Width="200" AutomationProperties.IsRequiredForForm="True" AutomationProperties.Name="_password" Visibility="Collapsed" IsEnabled="False"/>
             <Label x:Name="_feedback_label" Content="" HorizontalAlignment="Center" Margin="141,0,141,20" VerticalAlignment="Bottom" Width="338" Height="78" ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalContentAlignment="Center"/>
-            
+
         </Grid>
         <Grid x:Name="_InfoAccess_grid" Margin="5,5,5,5" Width="Auto" Height="Auto" >
             <Label x:Name="_feedback_label1" Content="Welcome firstName lastName, if you have any queries then don't hesitate to ask us" Margin="5,5,5,325" VerticalAlignment="Top" BorderThickness="2" ClipToBounds="True"/>
-            <ComboBox x:Name="_apps_comboBox" HorizontalAlignment="Left" Margin="34,67,0,0" VerticalAlignment="Top" Width="200" Height="25"/>
-            <Button x:Name="_request_access" Content="Request Access" HorizontalAlignment="Left" Margin="290,67,0,0" VerticalAlignment="Top" Width="100" Uid="_request_access" AutomationProperties.Name="_request_access"/>
-            <Button x:Name="_back_login" Content="Back to login" HorizontalAlignment="Left" Margin="467,67,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="_back_login" Uid="_back_login"/>
-            <ListBox x:Name="_app_list" HorizontalAlignment="Center" Height="244" Margin="34,136,36,0" VerticalAlignment="Top" Width="533" ScrollViewer.VerticalScrollBarVisibility="Visible" Grid.IsSharedSizeScope="True"/>
+            <ComboBox x:Name="_apps_comboBox" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="200" Height="25"/>
+            <Button x:Name="_request_access" Content="Request Access" HorizontalAlignment="Left" Margin="225,67,0,0" VerticalAlignment="Top" Width="100" Uid="_request_access" AutomationProperties.Name="_request_access"/>
+            <Button x:Name="_back_login" Content="Back to login" HorizontalAlignment="Left" Margin="480,67,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="_back_login" Uid="_back_login"/>
             <Label Content="Application" HorizontalAlignment="Left" Margin="68,40,0,0" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="_reset_password" Content="Reset Password" HorizontalAlignment="Left" Margin="356,66,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_1"/>
+            <DataGrid x:Name="_app_privs" HorizontalAlignment="Left" Height="294" Margin="10,107,0,0" VerticalAlignment="Top" Width="584" AutomationProperties.IsColumnHeader="True" FrozenColumnCount="4"/>
 
         </Grid>
     </Grid>
